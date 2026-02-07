@@ -1,5 +1,5 @@
 #content {
-    max-width: 1600;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -51,7 +51,7 @@ nav a:hover{
 body{
     background-color: #F1F9F9;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 22px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
 }
@@ -77,7 +77,6 @@ header{
 
 .msg{
     background-color: #89A894;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
     line-height: 1.5em;
     padding: 35px;
 }
@@ -93,6 +92,7 @@ footer{
 
 .msg p{
     color : #341C1C;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     font-size: 2em;
     padding-bottom: 15px;
 }
