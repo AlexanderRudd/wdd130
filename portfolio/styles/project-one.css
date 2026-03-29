@@ -1,0 +1,173 @@
+/* --- Imports & Variables --- */
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+
+:root {
+  --primary-color: #8C9377;
+  --secondary-color: #ECF1F5;
+  --accent1-color: #344844;
+  --accent2-color: #2A2B23;
+
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  --headline-color-on-white: #2A2B23; 
+  --paragraph-color-on-white: #344844;
+  --nav-link-color: #344844;
+  --nav-background-color: #ECF1F5;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #8C9377;
+}
+
+/* --- Global Styles --- */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--paragraph-font);
+  background-color: white;
+  color: var(--paragraph-color-on-white);
+  line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+}
+
+header .logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: var(--heading-font);
+  color: var(--nav-link-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+/* --- Main Layout --- */
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Vertical spacing between sections */
+}
+
+/* Section 1: Hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section 2 & 4: Summaries */
+.summary {
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.summary h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.summary p {
+  margin-bottom: 0;
+}
+
+/* Section 3: Project Grid (Two Columns) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.project-card {
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--headline-color-on-white);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-size: 0.9rem;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.social img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s ease;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+/* --- Responsive View --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack images on mobile */
+  }
+
+  body {
+    padding: 0;
+  }
+}
