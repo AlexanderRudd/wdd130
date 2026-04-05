@@ -1,32 +1,22 @@
 /* --- Imports & Variables --- */
-
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
 
-
-
 :root {
-
   --primary-color: #8C9377;
   --secondary-color: #ECF1F5;
   --accent1-color: #344844;
   --accent2-color: #2A2B23;
 
-
-
   --heading-font: "IM Fell French Canon SC";
   --paragraph-font: Lato, Helvetica, sans-serif;
 
-
-
-  --headline-color-on-white: #2A2B23;
+  --headline-color-on-white: #2A2B23; 
   --paragraph-color-on-white: #344844;
   --nav-link-color: #344844;
   --nav-background-color: #ECF1F5;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #8C9377;
 }
-
-
 
 body {
   max-width: 1200px;
@@ -36,8 +26,6 @@ body {
   color: var(--paragraph-color-on-white);
   line-height: 1.6;
 }
-
-
 
 header {
   display: flex;
@@ -63,7 +51,7 @@ nav a {
   color: var(--nav-link-color);
   text-transform: uppercase;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 10px; /* Matched to 5px 10px */
   transition: 0.3s;
 }
 
@@ -72,141 +60,107 @@ nav a:hover {
   color: var(--nav-hover-link-color);
 }
 
-
-
 main {
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 2rem;
+}
 
+.about-intro h2 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  color: var(--headline-color-on-white);
+}
 
-.hero img {
+.about-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-
-
-.summary {
+.skills-section {
   background-color: var(--secondary-color);
-  padding: 2.5rem;
-  text-align: left;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-
-
-.summary h2 {
+.skills-section h2 {
   font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
   margin-top: 0;
-  text-transform: uppercase;
 }
 
-
-
-.summary p {
-  margin-bottom: 0;
+.skills-section p {
+  white-space: pre-line;
 }
 
-
-
-.projects-grid {
+.info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
-
-
-.project-card {
-  text-align: center;
-}
-
-
-
-.project-card img {
+.info-column img {
   width: 100%;
   height: auto;
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-
-
-.project-card p {
-  font-weight: bold;
-  font-size: 1.2rem;
+.info-column h3 {
+  font-family: var(--heading-font);
   color: var(--headline-color-on-white);
 }
 
-
-
 footer {
   background-color: var(--secondary-color);
-  padding: 2.5rem;
-  margin-top: 4rem;
+  padding: 2rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
 
-
-
 .footer-nav {
   display: flex;
   gap: 15px;
+  font-size: 0.9rem;
 }
-
-
 
 .footer-nav a {
   text-decoration: none;
   color: var(--nav-link-color);
-  font-size: 0.9rem;
 }
-
-
 
 .social {
   display: flex;
   gap: 20px;
 }
 
-
-
 .social img {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.2s ease;
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
-
-
 
 .social img:hover {
-  transform: scale(1.1);
-
+  filter: none;
 }
-
-
 
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
-  .projects-grid {
+  .about-intro, 
+  .info-grid {
     grid-template-columns: 1fr;
   }
-
-  body {
-    padding: 0;
-  }
-
 }
-
